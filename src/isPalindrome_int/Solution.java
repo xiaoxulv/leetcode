@@ -1,4 +1,4 @@
-package isPanlindrome;
+package isPalindrome_int;
 
 public class Solution {
 	//negative is non-panlindrome

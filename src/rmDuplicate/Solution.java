@@ -1,6 +1,8 @@
 package rmDuplicate;
 
-import intersection.Solution.ListNode;
+import util.ListNode;
+
+
 
 public class Solution {
 	public ListNode deleteDuplicates(ListNode head) {
@@ -36,11 +38,11 @@ public class Solution {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Solution test = new Solution();
-		ListNode a = test.new ListNode(1);
-		ListNode b = test.new ListNode(1);
-		ListNode c = test.new ListNode(1);
-		ListNode d = test.new ListNode(1);
-		ListNode e = test.new ListNode(1);
+		ListNode a = new ListNode(1);
+		ListNode b = new ListNode(1);
+		ListNode c = new ListNode(1);
+		ListNode d = new ListNode(1);
+		ListNode e = new ListNode(1);
 		a.next = b;
 		b.next = c;
 		c.next = d;
@@ -49,23 +51,6 @@ public class Solution {
 		System.out.println(test.deleteDuplicates(a).toString());
 	}
 
-	public class ListNode {
-		int val;
-		ListNode next;
 
-		ListNode(int x) {
-			val = x;
-			next = null;
-		}
-		public String toString (){
-			ListNode n = this;
-			String s = "";
-			while(n != null){
-				s += n.val + " ";
-				n = n.next;
-			}
-			return s;
-		}
-	}
 
 }

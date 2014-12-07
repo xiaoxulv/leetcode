@@ -1,5 +1,7 @@
 package intersection;
 
+import util.ListNode;
+
 public class Solution {
 
 	//O(m+n) time; O(1) space
@@ -54,10 +56,10 @@ public class Solution {
 		// TODO Auto-generated method stub
 		Solution test = new Solution();
 		
-		ListNode a = test.new ListNode(1);
-		ListNode b = test.new ListNode(2);
-		ListNode c = test.new ListNode(9);
-		ListNode d = test.new ListNode(8);
+		ListNode a = new ListNode(1);
+		ListNode b = new ListNode(2);
+		ListNode c = new ListNode(9);
+		ListNode d = new ListNode(8);
 		
 		a.next = b;
 		b.next = c;
@@ -67,16 +69,6 @@ public class Solution {
 		
 
 	}
-	public class ListNode {
-		int val;
-		ListNode next;
-
-		ListNode(int x) {
-			val = x;
-			next = null;
-		}
-	}
-
 
 
 }
