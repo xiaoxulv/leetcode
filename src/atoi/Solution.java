@@ -53,8 +53,6 @@ public class Solution {
 			res = res * 10 + d;
 			i++;
 		}
-
-		System.out.println(overflow);
 		if (str.isEmpty())
 			return 0;
 		if (overflow) {
