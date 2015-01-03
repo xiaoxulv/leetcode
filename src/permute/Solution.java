@@ -16,9 +16,6 @@ public class Solution {
 			List<Integer> cur, List<List<Integer>> out) {
 		if (depth == num.length) {
 			out.add(new ArrayList<Integer>(cur));
-			//cur.clear();
-			
-
 		} else {
 			for (int i = 0; i < num.length; i++) {
 				if(!visit[i]){
