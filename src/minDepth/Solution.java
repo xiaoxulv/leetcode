@@ -5,6 +5,8 @@ import util.TreeNode;
 
 public class Solution {
     public int minDepth(TreeNode root) {
+    	//be careful!!!
+    	
 //        if(root == null)
 //        	return Integer.MAX_VALUE;
 //        if(root.left == null && root.right == null)
