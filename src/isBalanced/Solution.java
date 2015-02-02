@@ -18,6 +18,16 @@ public class Solution {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Solution test = new Solution();
+		TreeNode root = new TreeNode(3);
+		TreeNode a = new TreeNode(5);
+		TreeNode b = new TreeNode(7);
+		TreeNode c = new TreeNode(8);
+		TreeNode d = new TreeNode(9);
+		root.left = a;
+		root.right = b;
+		a.right = c;
+		b.right = d;
+		System.out.println(test.isBalanced(root));
 	}
 
 }

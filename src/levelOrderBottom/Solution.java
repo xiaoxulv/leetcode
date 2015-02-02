@@ -53,6 +53,8 @@ public class Solution {
 		root.right = b;
 		a.right = c;
 		b.right = d;
+		//System.out.println(root.toString());
+		//System.out.println(root.toStringlevel());
 		System.out.println(test.levelOrderBottom(root));
 	}
 
