@@ -3,19 +3,20 @@ package isValidBST;
 import util.TreeNode;
 
 public class Solution {
-	static TreeNode prev = null;
+
+	int prev = Integer.MIN_VALUE;
+	boolean first = true;
 	public boolean isValidBST(TreeNode root) {
 		if(root == null)
 			return true;
 		if(!isValidBST(root.left))
 			return false;
-		if(prev != null)
-			if(prev.val >= root.val)
-				return false;
-		prev = root;
+		if(prev >= root.val && !first)
+			return false;
+		prev = root.val;
+		first = false;
 		if(!isValidBST(root.right))
 			return false;
-		
 		return true;
 	}
 
@@ -32,6 +33,9 @@ public class Solution {
 		a.left = c;
 		b.right = d;
 		System.out.println(test.isValidBST(root));
+		Solution test1 = new Solution();
+		System.out.println(test1.isValidBST(root));
+	
 	}
 
 }
