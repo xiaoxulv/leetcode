@@ -22,7 +22,7 @@ public class Solution {
 			find(root.left, sum-root.val, res, cur);
 			find(root.right, sum-root.val, res, cur);
 		}
-		cur.remove(cur.size()-1);
+		cur.remove(cur.size()-1);//!!!!!!!!!!!!!!!!!!!!!!
 
 	}
 
