@@ -1,8 +1,11 @@
 package flatten;
 
+import java.util.Stack;
+
 import util.TreeNode;
 
 public class Solution {
+	// straight forward recursion
 	public void flatten(TreeNode root) {
         if(root == null) return;
         
@@ -19,7 +22,22 @@ public class Solution {
         }
         flatten(root.right);
     }
- 
+	// elegant approach using a stack
+	public void flattenStack(TreeNode root) {
+        if(root == null) return;
+        Stack<TreeNode> s = new Stack<TreeNode>();
+        s.push(root);
+        while(!s.isEmpty()){
+        	TreeNode cur = s.pop();
+        	if(cur.right != null)
+        		s.push(cur.right);
+        	if(cur.left != null)
+        		s.push(cur.left);
+        	if(!s.isEmpty())
+        		cur.right = s.peek();
+        	cur.left = null;
+        }
+    }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
@@ -33,7 +51,8 @@ public class Solution {
 		a.left = c;
 		b.right = d;
 		Solution test = new Solution();
-		test.flatten(root);
+		//test.flatten(root);
+		test.flattenStack(root);
 		System.out.println(root);
 	}
 
