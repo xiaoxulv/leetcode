@@ -20,7 +20,8 @@ public class Solution {
 		// TODO Auto-generated method stub
 		Solution test = new Solution();
 		int []a = {1,3,5};
-		System.out.println(test.twoSum(a, 6));
+		System.out.println(test.twoSum(a, 6)[0]);
+		System.out.println(test.twoSum(a, 6)[1]);
 	}
 
 }
