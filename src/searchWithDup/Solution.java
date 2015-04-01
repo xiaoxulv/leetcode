@@ -10,30 +10,30 @@ public class Solution {
 	        	mid = left + (right-left)/2;
 	        	if(A[mid] == target)
 	        		return true;
-	        	if(A[right] > A[mid]){
+	        	if(A[left] < A[mid]){
 	        		 if(A[left] <= target && A[mid] > target)
-	        			 right = mid;
+	        			 right = mid-1;
 	        		 else
 	        			 left = mid+1;
 	        	}
-	        	else if(A[right] < A[mid]){
+	        	else if(A[left] > A[mid]){
 	       		 if(A[mid] < target && A[right] >= target)
 	    			 left = mid+1;
 	    		 else
-	    			 right = mid;
+	    			 right = mid-1;
 	        	}
 	        	else{
-	        		right--;
+	        		left++;
 	        	}
 	        }
-	    	return A[left]==target ;
+	    	return false;
  }
 	    
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int a[] = {1,3};
+		int a[] = {3,1};
 		Solution test = new Solution();
-		System.out.println(test.search(a,3));
+		System.out.println(test.search(a,1));
 	}
 
 }
